@@ -52,7 +52,7 @@ namespace GestionePrestito
             txtrate.Text = null;
             txtrestituire.Text = null;
             txttasso.Text = null;
-            femmina.IsChecked = false;
+            femmina.IsChecked = false ;
             maschio.IsChecked = false;
             data.SelectedDate = null;
             combocitta.SelectedItem = null;
