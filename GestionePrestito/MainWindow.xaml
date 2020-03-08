@@ -7,38 +7,54 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF90F132" Offset="0"/>
+                <GradientStop Color="#FFEBDE22" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Label Content="Cognome" HorizontalAlignment="Left" Margin="46,54,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nome" HorizontalAlignment="Left" Margin="46,103,0,0" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Height="163" Margin="684,66,0,0" Stroke="Black" VerticalAlignment="Top" Width="100">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFBEF69F" Offset="0"/>
+                    <GradientStop Color="#FFDDFF8C" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Cognome" HorizontalAlignment="Left" Margin="46,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="49,116,0,0" VerticalAlignment="Top"/>
         <Label Content="Sesso" HorizontalAlignment="Left" Margin="49,154,0,0" VerticalAlignment="Top"/>
         <Label Content="Data di nascita" HorizontalAlignment="Left" Margin="46,203,0,0" VerticalAlignment="Top"/>
         <Label Content="Città di residenza" HorizontalAlignment="Left" Margin="46,259,0,0" VerticalAlignment="Top"/>
-        <Label Name="lblresult" Content="" HorizontalAlignment="Left" Height="69" Margin="10,323,0,0" VerticalAlignment="Top" Width="774"/>
-        <TextBox Name="txtcognome" HorizontalAlignment="Left" Height="23" Margin="161,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txtnome" HorizontalAlignment="Left" Height="23" Margin="161,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <RadioButton Name="femmina" Content="F" HorizontalAlignment="Left" Margin="161,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.935,0.632"/>
-        <RadioButton Name="maschio" Content="M" HorizontalAlignment="Left" Margin="225,160,0,0" VerticalAlignment="Top"/>
-        <DatePicker Name="data" HorizontalAlignment="Left" Margin="161,203,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name="combocitta" HorizontalAlignment="Left" Margin="161,261,0,0" VerticalAlignment="Top" Width="120">
+        <Label x:Name="lblresult" Content="" HorizontalAlignment="Left" Height="69" Margin="10,323,0,0" VerticalAlignment="Top" Width="774" FontSize="9"/>
+        <TextBox x:Name="txtcognome" HorizontalAlignment="Left" Height="23" Margin="161,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtnome" HorizontalAlignment="Left" Height="23" Margin="161,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="femmina" Content="F" HorizontalAlignment="Left" Margin="161,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.935,0.632"/>
+        <RadioButton x:Name="maschio" Content="M" HorizontalAlignment="Left" Margin="225,160,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="data" HorizontalAlignment="Left" Margin="161,203,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="combocitta" HorizontalAlignment="Left" Margin="161,261,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="Fabro"/>
             <ComboBoxItem Content="Milano"/>
             <ComboBoxItem Content="Ravenna"/>
         </ComboBox>
-        <Label Content="Importo richiesto" HorizontalAlignment="Left" Margin="397,54,0,0" VerticalAlignment="Top"/>
-        <Label Content="N. Rate" HorizontalAlignment="Left" Margin="397,102,0,0" VerticalAlignment="Top"/>
-        <Label Content="Percentuale" HorizontalAlignment="Left" Margin="397,154,0,0" VerticalAlignment="Top"/>
+        <Label Content="Importo richiesto" HorizontalAlignment="Left" Margin="397,64,0,0" VerticalAlignment="Top"/>
+        <Label Content="N. Rate" HorizontalAlignment="Left" Margin="397,113,0,0" VerticalAlignment="Top"/>
+        <Label Content="Percentuale" HorizontalAlignment="Left" Margin="397,157,0,0" VerticalAlignment="Top"/>
         <Label Content="Importo da restituire" HorizontalAlignment="Left" Margin="395,201,0,0" VerticalAlignment="Top"/>
         <Label Content="Importo per rata" HorizontalAlignment="Left" Margin="395,259,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtimporto" HorizontalAlignment="Left" Height="23" Margin="533,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txtrate" HorizontalAlignment="Left" Height="23" Margin="533,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txttasso" HorizontalAlignment="Left" Height="23" Margin="533,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtimporto" HorizontalAlignment="Left" Height="23" Margin="533,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtrate" HorizontalAlignment="Left" Height="23" Margin="533,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txttasso" HorizontalAlignment="Left" Height="23" Margin="533,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="txtrestituire" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="533,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="impxrata" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="533,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Name="btncalcola" Content="Calcola" HorizontalAlignment="Left" Margin="698,87,0,0" VerticalAlignment="Top" Width="75" Click="Calcola_Click"/>
-        <Button Name="btnnuovo" IsEnabled="False" Content="Nuovo" HorizontalAlignment="Left" Margin="698,135,0,0" VerticalAlignment="Top" Width="75" Click="Nuovo_Click_1"/>
-        <Button Name="btnstampa" Content="Stampa" HorizontalAlignment="Left" Margin="698,186,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="txtimpxrata" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="533,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btncalcola" Content="Calcola" HorizontalAlignment="Left" Margin="698,87,0,0" VerticalAlignment="Top" Width="75" Click="Calcola_Click"/>
+        <Button x:Name="btnnuovo" IsEnabled="False" Content="Nuovo" HorizontalAlignment="Left" Margin="698,135,0,0" VerticalAlignment="Top" Width="75" Click="Nuovo_Click_1"/>
+        <Button x:Name="btnstampa" Content="Stampa" HorizontalAlignment="Left" Margin="698,186,0,0" VerticalAlignment="Top" Width="75" Click="Btnstampa_Click"/>
+        <Label Content="GESTIONE PRESTITO" HorizontalAlignment="Left" Margin="277,0,0,0" VerticalAlignment="Top" FontFamily="MV Boli" FontSize="20"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="5" Margin="0,44,-0.4,0" Stroke="Black" VerticalAlignment="Top" Width="794"/>
 
     </Grid>
 </Window>
